@@ -42,6 +42,7 @@
 <body>
 <?php
    $hostel_id = $_SESSION['hostel_id'];
+   echo $hostel_id;
    $query1 = "SELECT * FROM Application where Hostel_id = '$hostel_id' and Application_status = 0";
    $result1 = mysqli_query($conn,$query1);
    //select the hostel name from hostel table
@@ -60,7 +61,7 @@ if (isset($_POST['Allocate'])) {
 			$query9 = "update application set Application_status = 1,Room_No = '$room_no' where Student_id='$reg_no'" ;
             $result9 = mysqli_query($conn,$query9);
 			//room updation
-			$query10 = "update room set Allocated=1  where Room_No='$room_no' and Allocated=0 limit 1";
+			$query10 = "update room set Allocated=1  where Room_No='$room_no' and Hostel_id='$hostel_id' and Allocated=0 limit 1";
             $result10 = mysqli_query($conn,$query10);
 
 			$query11 = "select Room_id from room where Room_No='$room_no' limit 1";
@@ -68,7 +69,7 @@ if (isset($_POST['Allocate'])) {
             $row11 = mysqli_fetch_assoc($result11);
 			$room_id = $row11['Room_id'];
 
-			$query12="update student set Hostel_id='$hostel_id',Room_id='$room_id' where Student_id='$reg_no'";
+			$query12="update student set Hostel_id='$hostel_id',Room_id='$room_id',Room_No='$room_no' where Student_id='$reg_no'";
 			$result12 = mysqli_query($conn,$query12);
 		header("Location: allocate_room_new.php");
 //exit();
@@ -178,7 +179,7 @@ if (isset($_POST['Allocate'])) {
             $row7 = mysqli_fetch_assoc($result7);
             $student_name = $row7['Fname']." ".$row7['Lname'];
 
-			$query8 = "SELECT DISTINCT Room_No FROM ROOM WHERE Hostel_id=1 and Allocated=0";
+			$query8 = "SELECT DISTINCT Room_No FROM ROOM WHERE Hostel_id=$hostel_id and Allocated=0";
 			$result8 = mysqli_query($conn,$query8);
 
 
@@ -243,7 +244,7 @@ if (isset($_POST['Allocate'])) {
 <footer class="py-5">
 	<div class="container py-md-5">
 		<div class="footer-logo mb-5 text-center">
-			<a class="navbar-brand"  href="http://www.nitc.ac.in/" target="_blank" >NIT<span class="display"> CALICUT</span></a>
+			<a class="navbar-brand"  href="http://srkrec.edu.in/" target="_blank" >SRKR<span class="display"> BHIMAVARAM</span></a>
 		</div>
 		<div class="footer-grid">
 			

@@ -47,7 +47,7 @@
 		<div class="container agile-banner_nav">
 			<nav class="navbar navbar-expand-lg navbar-light bg-light">
 				
-				<h1><a class="navbar-brand" href="home.php">In <span class="display"> Trend</span></a></h1>
+				<h1><a class="navbar-brand" href="home.php">SRKR <span class="display"> </span></a></h1>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 				</button>
@@ -160,7 +160,7 @@ if(isset($_POST['submit'])){
     }
     $room_id = (int)$row2['Room_id'];
     /*echo "<script type='text/javascript'>alert('<?php echo $room_id ?>')</script>";*/
-	$query3 = "SELECT * FROM Student WHERE Student_id = '$roll' and Hostel_id = '$hostel_id' and Room_id = '$room_id'";
+	$query3 = "SELECT * FROM Student WHERE Student_id = '$roll'";
 	$result3 = mysqli_query($conn,$query3);
     if(mysqli_num_rows($result3)==0)
 	{
@@ -170,15 +170,15 @@ if(isset($_POST['submit'])){
     $row3 = mysqli_fetch_assoc($result3);
     if($result3)
 	{
-    	$query4 = "UPDATE Student SET Hostel_id = NULL, Room_id = NULL WHERE Student_id = '$roll'";
+    	$query4 = "UPDATE Student SET Hostel_id = NULL, Room_id = NULL,Room_No=Null WHERE Student_id = '$roll'";
     	$result4 = mysqli_query($conn,$query4);
     	if($result4)
 		{
-    		$query5 = "UPDATE room SET Allocated = 0 WHERE Room_id = '$room_id' and Allocated=1 limit 1" ;
+    		$query5 = "UPDATE room SET Allocated = 0 WHERE Room_id = '$room_id' and Hostel_id='$hostel_id' and Allocated=1 limit 1" ;
     		$result5 = mysqli_query($conn,$query5);
     		if($result5)
 			{
-    			$query6 = "DELETE FROM Application WHERE Student_id = '$roll'";
+    			$query6 = "DELETE FROM Application WHERE Student_id = '$roll' and Hostel_id='$hostel_id'";
     			$result6 = mysqli_query($conn,$query6);
     			if($result6)
 				{
@@ -198,7 +198,7 @@ if(isset($_POST['submit'])){
 <footer class="py-5">
 	<div class="container py-md-5">
 		<div class="footer-logo mb-5 text-center">
-			<a class="navbar-brand" href="index.html">In <span class="display"> Trend</span></a>
+			<a class="navbar-brand" href="index.html">SRKR <span class="display"> </span></a>
 		</div>
 		<div class="footer-grid">
 			<div class="social mb-4 text-center">
@@ -230,7 +230,7 @@ if(isset($_POST['submit'])){
 				</ul>
 			</div>
 			<div class="agileits_w3layouts-copyright mt-4 text-center">
-				<p>© 2018 Intrend. All Rights Reserved | Design by <a href="http://w3layouts.com/" target="=_blank"> W3layouts </a></p>
+				<p>© 2023 MSDS Project . All Rights Reserved | Design by <a href="http://srkrec.edu.in/" target="=_blank"> SRKR </a></p>
 		</div>
 		</div>
 	</div>

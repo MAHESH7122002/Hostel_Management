@@ -167,7 +167,7 @@
 <h2 class="heading text-capitalize mb-sm-5 mb-4"> Rooms Allotted </h2>
 <?php
    //$hostel_id = $_SESSION['hostel_id'];
-   $query1 = "SELECT * FROM Student";
+   $query1 = "SELECT * FROM Student where Hostel_id is not Null";
    $result1 = mysqli_query($conn,$query1);
    //select the hostel name from hostel table
    //$query6 = "SELECT * FROM Hostel WHERE Hostel_id = '$hostel_id'";
@@ -196,18 +196,18 @@
       		//get the room_no of the student from room_id in room table
             $room_id = $row1['Room_id'];
             $HID = $row1['Hostel_id'];
-            $query7 = "SELECT * FROM Room WHERE Room_id = '$room_id'";
-            $result7 = mysqli_query($conn,$query7);
-            $row7 = mysqli_fetch_assoc($result7);
-			if(isset($row7['Room_No']))
+            /*$query7 = "SELECT * FROM Room WHERE Room_id = '$room_id'";
+            //$result7 = mysqli_query($conn,$query7);
+            //$row7 = mysqli_fetch_assoc($result7);
+			if(isset($row['Room_No']))
 			{
             $room_no = $row7['Room_No'];
 			}
 			else
 			{
 				$room_no=0;
-			}
-            $query99 = "SELECT * FROM Hostel WHERE Hostel_id = '$HID'";
+			}*/
+            $query99 = "SELECT * FROM Hostel WHERE Hostel_id = '$HID' ";
             $result99 = mysqli_query($conn,$query99);
             $row99 = mysqli_fetch_assoc($result99);
 			if(isset($row99['Hostel_name']))
@@ -227,7 +227,7 @@
             //student name
             $student_name = $row1['Fname']." ".$row1['Lname'];
 
-      		echo "<tr><td>{$student_name}</td><td>{$row1['Student_id']}</td><td>{$row1['Mob_no']}</td><td>{$HNM}</td><td>{$room_no}</td></tr>\n";
+      		echo "<tr><td>{$student_name}</td><td>{$row1['Student_id']}</td><td>{$row1['Mob_no']}</td><td>{$HNM}</td><td>{$row1['Room_No']}</td></tr>\n";
       	}
       }
     ?>
@@ -242,7 +242,7 @@
 <footer class="py-5">
 	<div class="container py-md-5">
 		<div class="footer-logo mb-5 text-center">
-			<a class="navbar-brand" href="http://www.nitc.ac.in/" target="_blank">NIT <span class="display"> CALICUT</span></a>
+			<a class="navbar-brand" href="http://srkrec.edu.in/" target="_blank">SRKR <span class="display"> BHIMAVARAM</span></a>
 		</div>
 		<div class="footer-grid">
 			

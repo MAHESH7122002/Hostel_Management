@@ -48,11 +48,11 @@
 <!-- banner -->
 <div class="inner-page-banner" id="home"> 	   
 	<!--Header-->
-	<header>
 		<div class="container agile-banner_nav">
 			<nav class="navbar navbar-expand-lg navbar-light bg-light">
 				
-				<h1><a class="navbar-brand" href="home_manager.php">NITC <span class="display"></span></a></h1>
+				<h1><a class="navbar-brand" href="home_manager.php">SRKR
+					 <span class="display"></span></a></h1>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 				</button>
@@ -155,7 +155,7 @@ $query6 = "SELECT * FROM Hostel WHERE Hostel_id = '$hostel_id'";
 <footer class="py-5">
 	<div class="container py-md-5">
 		<div class="footer-logo mb-5 text-center">
-			<a class="navbar-brand" href="http://www.nitc.ac.in/" target="_blank">NIT <span class="display"> CALICUT</span></a>
+			<a class="navbar-brand" href="http://srkrec.edu.in/" target="_blank">SRKR <span class="display"> BHIMAVARAM</span></a>
 		</div>
 		<div class="footer-grid">
 			

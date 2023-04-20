@@ -42,7 +42,7 @@
 	<!-- //main -->
 	<!-- copyright -->
 	<div class="copyright agileinfo">
-		<p>© 2017 Profile Subscribe Form . All rights reserved | Design by <a href="http://w3layouts.com/" target="_blank">W3layouts</a></p>
+		<p>© 2023 Profile Subscribe Form . All rights reserved | Design by <a href="http://srkrec.edu.in/" target="_blank">SRKR</a></p>
 	</div>
 	<!-- //copyright -->
 </body>

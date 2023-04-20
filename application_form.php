@@ -45,7 +45,7 @@
 		<div class="container agile-banner_nav">
 			<nav class="navbar navbar-expand-lg navbar-light bg-light">
 				
-				<h1><a class="navbar-brand" href="home.php">NITC <span class="display"></span></a></h1>
+				<h1><a class="navbar-brand" href="home.php">SRKR <span class="display"></span></a></h1>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 				</button>
@@ -125,7 +125,7 @@
 <footer class="py-5">
 	<div class="container py-md-5">
 		<div class="footer-logo mb-5 text-center">
-			<a class="navbar-brand" href="http://nitc.ac.in" target="_blank">NIT <span class="display"> CALICUT</span></a>
+			<a class="navbar-brand" href="http://srkrec.edu.in/" target="_blank">SRKR <span class="display"> BHIMAVARAM</span></a>
 		</div>
 		<div class="footer-grid">
 			
@@ -218,11 +218,13 @@
      $row_imp = mysqli_fetch_assoc($result_imp);
      $room_id = $row_imp['Room_id'];
      /*echo "<script type='text/javascript'>alert('<?php echo $room_id ?>')</script>";*/
-     if(is_null($room_id)){
+     if(is_null($room_id))
+	 {
      
-     $query_imp2 = "SELECT * FROM Application WHERE Student_id = '$roll'";
+     $query_imp2 = "SELECT * FROM Application WHERE Student_id = '$roll' ";
      $result_imp2 = mysqli_query($conn,$query_imp2);
-     if(mysqli_num_rows($result_imp2)==0){
+     if(mysqli_num_rows($result_imp2)==0)
+	{
 
 
      $query = "SELECT * FROM Student WHERE Student_id = '$roll'";
@@ -240,7 +242,7 @@
       	    $result2 = mysqli_query($conn,$query2);
       	    $row2 = mysqli_fetch_assoc($result2);
       	    $hostel_id = $row2['Hostel_id'];
-            $query3 = "INSERT INTO Application (Student_id,Hostel_id,Application_status,Message) VALUES ('$roll','$hostel_id',true,'$message')";
+            $query3 = "INSERT INTO Application (Student_id,Hostel_id,Application_status,Message) VALUES ('$roll','$hostel_id',0,'$message')";
             $result3 = mysqli_query($conn,$query3);
 
             if($result3){
