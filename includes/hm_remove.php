@@ -17,13 +17,14 @@ if (isset($_POST['hm_remove_submit'])) {
       $result = mysqli_query($conn, $sql);
       if($row = mysqli_fetch_assoc($result)){
 
-      $sql2 = "SELECT *FROM Hostel WHERE Hostel_name = '$hostel_name'";
+      $sql2 = "SELECT * FROM Hostel WHERE Hostel_name = '$hostel_name'";
       $result2 = mysqli_query($conn, $sql2);
       if($row2 = mysqli_fetch_assoc($result2)){
         $HNO = $row2['Hostel_id'];
         if ($HNO == $row['Hostel_id']) {
-          $pwdCheck = password_verify($Adminpassword, $_SESSION['PSWD']);
-          if ($pwdCheck==false) {
+          $pwdCheck = $Adminpassword==$_SESSION['PSWD'];
+          if ($pwdCheck==false) 
+          {
             header("Location: ../admin/create_hm.php?error=wrongpwd");
             exit();
           }

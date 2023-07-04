@@ -13,7 +13,6 @@ if (isset($_POST['signup-submit'])) {
   $password = $_POST['pwd'];
   $cnfpassword = $_POST['confirmpwd'];
 
-
   if(!preg_match("/^[a-zA-Z0-9]*$/",$roll)){
     header("Location: ../signup.php?error=invalidroll");
     exit();

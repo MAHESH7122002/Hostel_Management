@@ -106,10 +106,10 @@
 				<a href="application_form.php"><h3>A Hostel</h3></a>
 				<div class="row">
 					<div class="col-md-3 col-2">
-						<h4>1 yr</h4>
+						<h4>Boys</h4>
 					</div>
 					<div class="col-md-9 col-10">
-						<p>A Hostel</p>
+						<p>A Block</p>
 					</div>
 				</div>
 			</div>
@@ -117,10 +117,10 @@
 				<h3>B Hostel</h3>
 				<div class="row">
 					<div class="col-md-3 col-2">
-						<h4>3 yr</h4>
+						<h4>Boys</h4>
 					</div>
 					<div class="col-md-9 col-10">
-						<p>B Hostel</p>
+						<p>B Block</p>
 					</div>
 				</div>
 			</div>
@@ -128,23 +128,25 @@
 				<h3>C Hostel</h3>
 				<div class="row">
 					<div class="col-md-3 col-2">
-						<h4>2 yr</h4>
+						<h4>Girls</h4>
 					</div>
 					<div class="col-md-9 col-10">
-						<p>C Hostel</p>
+						<p>C Block</p>
 					</div>
 				</div>
+				
 			</div>
 			<div class="col-lg-4 col-md-6 mt-5 service-grid1">
 				<h3>D Hostel</h3>
 				<div class="row">
 					<div class="col-md-3 col-2">
-						<h4>4 yr</h4>
+						<h4>Girls</h4>
 					</div>
 					<div class="col-md-9 col-10">
-						<p>D Hostel</p>
+						<p>D Block</p>
 					</div>
 				</div>
+	<!--
 			</div>
 			<div class="col-lg-4 col-md-6 mt-5 service-grid1">
 				<h3>E Hostel</h3>
@@ -157,6 +159,7 @@
 					</div>
 				</div>
 			</div>
+
 			<div class="col-lg-4 col-md-6 mt-5 service-grid1">
 				<h3>F Hostel</h3>
 				<div class="row">
@@ -168,8 +171,10 @@
 					</div>
 				</div>
 			</div>
+	-->
 		</div>
 	</div>
+
 </section>
 <!-- services -->
 
@@ -229,6 +234,7 @@
 					</div>
 					<div class="clearfix"> </div>
 			</div>
+	
 			<div class="clearfix"> </div>
 		</div>
 	</div>
@@ -254,6 +260,7 @@
 							</div>
 						</div>
 					</div>-->
+<!--
 					<div class="col-lg-3 col-sm-6 mt-sm-0 mt-3 banner_bottom_right_grid">
 						<div class="view view1 view-tenth">
 							<div class="agile_text_box">
@@ -279,6 +286,7 @@
 							</div>
 						</div>
 					</div>
+	-->
 					<!--<div class="col-lg-3 col-sm-6 mt-lg-0 mt-3 banner_bottom_right_grid">
 						<div class="view view3 view-tenth">
 							<div class="agile_text_box">

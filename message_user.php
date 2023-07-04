@@ -137,7 +137,6 @@
 			<a class="navbar-brand" href="http://srkrec.edu.in/" target="_blank">SRKR <span class="display"> BHIMAVARAM</span></a>
 		</div>
 		<div class="footer-grid">
-			
 			<div class="list-footer">
 				<ul class="footer-nav text-center">
 					<li>
